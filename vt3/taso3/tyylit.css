@@ -1,0 +1,57 @@
+/* Täysikokoiselle ikkunalle */
+body {
+	display: flex; 
+	flex-flow: column-reverse wrap;
+	justify-content: space-between;
+}
+.lomake_elementti {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.monivalinta {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+}
+.monivalinta div {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+}
+
+/* Kapeanäyttöisten asettelutila */
+@media 	all
+		and (min-width: 360px) 
+		and (min-device-width: 360px) {
+	.monivalinta {
+		flex-direction: column;
+	}
+}
+
+@media 	all
+		and (min-width: 600px) 
+		and (min-device-width: 600px) {
+	body {
+		flex-direction: row;
+	}
+}
+
+.monivalinta label {
+	flex-order: 1;
+	flex-grow: 3;
+}
+.monivalinta input {
+	flex-order: 2;
+	flex-grow: 0;
+}
+
+input:invalid {
+	border: solid 1px #b00;
+	background-color: #faa;
+}
+
+fieldset:invalid {
+	border: double 3px #b00;
+}

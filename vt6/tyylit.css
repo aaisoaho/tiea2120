@@ -1,0 +1,24 @@
+#root div {
+	display: flex; 
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+/*.sisalto {
+	flex-grow: 2;
+}*/
+.sisalto {
+	max-width: 50%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+}
+.rivi {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+input:invalid {
+	border: solid 1px #b00;
+	background-color: #faa;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://appro.mit.jyu.fi/tiea2120/vt/vt2/data.js"></script>
+        <script type="text/javascript" src="vt2.js"></script>
+        <link rel="StyleSheet" href="tyylit.css" type="text/css" />
+        <meta charset="utf-8"/>
+        <title>Tulospalvelu</title>
+    </head>
+    <body>
+
+<!-- Tämän tiedoston sisältöä ei saa muuttaa kuin ohjelmallisesti! -->
+
+<h1>Tulospalvelu</h1>
+
+<div id="tupa"></div>
+<!--
+Tähän tulee listaus joukkueista nimen mukaan aakkostettuna ja joukkueiden pisteet. Ykköstasolla kaikkien
+joukkueiden pistemäärä on nolla (0).
+
+<table>
+    <caption>Tulokset</caption>
+    <tr><th>Joukkue</th>        <th>Pisteet</th></tr>
+    <tr><td>Joku joukkue</td>   <td>30</td></tr>
+    <tr><td>Porukka</td>        <td>138</td></tr>
+    <tr><td>Ryhmä</td>          <td>0</td></tr>
+    <tr><td>Sakki</td>          <td>55</td></tr>
+    ...
+</table>
+
+Kolmostasolla listausta laajennetaan joukkueen jäsenten nimillä ja tulokset ovat
+oletuksena pistejärjestyksessä. Nyt joukkueille myös lasketaan oikeat pistemäärät.
+Suurin pistemäärä listataan ensimmäisenä. 
+Lisäksi joukkueen nimen yhteydessä listataan myös joukkueen
+jäsenten nimet. Taulukon sarakeotsikoita klikkaamalla voi valita missä järjestyksessä tulokset
+näytetään. Jos klikkaa joukkue-sarakeotsikkoa niin listaus järjestetään joukkueen nimen mukaan nousevaan aakkosjärjestykseen.
+Jos klikkaa Pisteet-sarakeotsikkoa niin tulokset järjestäään pisteiden mukaan laskevaan järjestykseen
+Joukkueiden nimistä tehdään linkkejä, jotka vievät joukkuelomakkeeseen. Lomakkeeseen tulevat muokattavaksi
+klikatun joukkueen tiedot.
+
+        <table>
+            <caption>Tulokset</caption>
+            <tr><th>Joukkue</th>                                                         <th>Pisteet</th></tr>
+            <tr><td><a href="#joukkue">Porukka</a> <br />Etunimi1 Sukunimi1, Etunimi2 Sukunimi2,...</td>        <td>138</td></tr>
+            <tr><td><a href="#joukkue">Sakki</a> <br />Etunimi1 Sukunimi1, Etunimi2 Sukunimi2,...</td>          <td>55</td></tr>
+            <tr><td><a href="#joukkue">Joku joukkue</a> <br />Etunimi1 Sukunimi1, Etunimi2 Sukunimi2,...</td>   <td>30</td></tr>
+            <tr><td><a href="#joukkue">Ryhmä</a> <br />Etunimi1 Sukunimi1, Etunimi2 Sukunimi2,...</td>          <td>0</td></tr>
+            ...
+        </table>
+
+Viitostasolla listaukseen lisätään vielä omina sarakkeinaan joukkueen kulkema matka ja käyttämä kokonaisaika. Myös
+näiden sarakkeiden mukaan voi järjestää listauksen.
+
+-->
+
+        <h2 id="joukkue">Joukkue</h2>
+      
+        <!--
+Kolmostasolla lisää tähän lomake jolla voi lisätä uuden joukkueen tai muokata
+jo olemassa olevan joukkueen tietoja. Joukkueelta kysytään
+nimi ja lista jäsenistä. Jäseniä voi syöttää n kappaletta. Jäseniä on aina syötettävä vähintään
+kaksi kappaletta eli alussa on oltava kentät kahden jäsenen nimille. 
+Uusia syöttökenttiä luodaan tarpeen mukaan. Jos kaikki pyydettyjä tietoja (joukkueen nimi ja väh. kaksi jäsentä ) ei ole
+syötetty niin lisäystä ei tehdä. Lisää joukkue -painike on disabloituna kunnes pakolliset tiedot on syötetty.
+Onnistuneen lisäämisen jälkeen lomakkeen kenttien sisältö tyhjennetään.
+
+<form action="foobar.ei.toimi.example" id="joukkue" method="post">
+    <fieldset>
+        <legend>Uusi joukkue</legend>
+        <p><label>Nimi <input type="text" value="" /></label></p>
+        <fieldset>
+            <legend>Jäsenet</legend>
+            <p><label>Jäsen 1 <input type="text" value="" /></label></p>
+            <p><label>Jäsen 2 <input type="text" value="" /></label></p>
+...
+        </fieldset>
+        <p><button name="joukkue" id="joukkue">Lisää joukkue</button></p>
+    </fieldset>
+</form>
+
+Uusi joukkue on lisättävä myös sivulla näkyvään joukkuelistaukseen oikealle paikalle. Oletuksena joukkueen
+pisteet ovat 0, kuljettu matka on 0 km ja käyttämä aika on 00:00:00.
+
+Viitostasolla lisää saman lomakkeen yhteyteen listaus joukkueen rastileimauksista. Mahdollista leimausten
+täydellinen muokkaaminen eli leimauksen voi kokonaan poistaa tai vaihtaa leimattua rastia tai leimauksen kellonaikaa.
+Joukkueelle voi myös lisätä uusia leimauksia. Rasti valitaan alasvetovalikosta. Jos joukkueen leimauksiin tehdään muutoksia
+niin myös tuloslistaus täytyy päivittää.
+
+-->
+
+        <h2>Lisää rasti</h2>
+<form action="foobar.ei.toimi.example" method="post">
+</form>
+        <!--
+Luo tähän lomake jolla voit lisätä uuden rastin. Jos kaikkia tietoja ei ole täytetty niin lisäystä ei tehdä. Uusi rasti
+täytyy lisätä myös varsinaiseen rastit-listaukseen oikeaan kohtaan.
+<form action="foobar.ei.toimi.example" method="post">
+    <fieldset>
+        <legend>Rastin tiedot</legend>
+        <p><label>Lat <input type="text" value="" /></label></p>
+        <p><label>Lon <input type="text" value="" /></label></p>
+        <p><label>Koodi <input type="text" value="" /></label></p>
+        <p><button name="rasti" id="rasti">Lisää rasti</button></p>
+    </fieldset>
+</form>
+
+-->
+
+        <h2>Rastit</h2>
+        <!--
+Tähän tulee listaus rastien koodeista ja rastien koordinaateista. Rastit listataan koodin mukaan aakkosjärjestyksessä
+<table>
+        <table>
+            <tr><th>Rasti</th>  <th>Lat</th>    <th>Lon</th></tr>
+            <tr><td>10</td>     <td>62.1111</td>       <td>25.567</td></tr>
+            <tr><td>2A</td>     <td>62.6789</td>       <td>25.987</td></tr>
+            <tr><td>7C</td>     <td>62.1234</td>       <td>25.123</td></tr>
+            <tr><td>99</td>     <td>62.1234</td>       <td>25.123</td></tr>
+            <tr><td>LÄHTÖ</td>     <td>62.10</td>       <td>25.99</td></tr>
+            ...
+        </table>
+
+</table>
+-->
+
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#map {
+	float: left;
+	margin: 0;
+}
+#listat {
+	float: right;
+	margin: 0;
+}
+#kartalla, #loput {
+	width: 50%;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+}
+#kartalla {
+	float: left;
+}
+#loput {
+	float: right;
+}
+ul {
+	min-height: 100px;
+}
+.rastiKoodit {
+	white-space: nowrap;
+	text-shadow:	0 0 0.1em black, 0 0 0.1em black,
+					0 0 0.1em black,0 0 0.1em black,0 0 0.1em;
+	color: white;
+}
